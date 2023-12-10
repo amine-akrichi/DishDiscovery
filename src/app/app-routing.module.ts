@@ -6,6 +6,8 @@ import { LayoutComponent } from './client/layout/layout.component';
 import { HomeComponent } from './client/components/home/home.component';
 import { SignupComponent } from './shared/components/signup/signup.component';
 import { SigninComponent } from './shared/components/signin/signin.component';
+import { RecipesExploreComponent } from './client/components/recipes-explore/recipes-explore.component';
+import { CuisinesExploreComponent } from './client/components/cuisines-explore/cuisines-explore.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
@@ -13,17 +15,17 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      {
-        path: 'signup',
-        component: SignupComponent,
-        data: { noLayout: true },
-      },
-      {
-        path: 'signin',
-        component: SigninComponent,
-        data: { noLayout: true },
-      },
+      { path: 'recipes', component: RecipesExploreComponent },
+      { path: 'cuisines', component: CuisinesExploreComponent },
     ],
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'signin',
+    component: SigninComponent,
   },
 ];
 

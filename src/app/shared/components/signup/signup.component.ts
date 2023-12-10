@@ -12,9 +12,10 @@ constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
-      name: ["", [Validators.required, Validators.minLength(3)]],
-      country: ["", [Validators.required]],
+      firstname : ["", [Validators.required, Validators.minLength(3)]],
+      lastname :  ["", [Validators.required, Validators.minLength(3)]],
       email: ["", [Validators.required, Validators.email]],
+      username: ["", [Validators.required]],
       password: ["", [Validators.required, Validators.minLength(6)]], 
     },
     );

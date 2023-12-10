@@ -12,6 +12,10 @@ import { HomeFeaturedComponent } from './client/components/home-featured/home-fe
 import { HomeCuisinesComponent } from './client/components/home-cuisines/home-cuisines.component';
 import { SignupComponent } from './shared/components/signup/signup.component';
 import { SigninComponent } from './shared/components/signin/signin.component';
+import { RecipesExploreComponent } from './client/components/recipes-explore/recipes-explore.component';
+import { CuisinesExploreComponent } from './client/components/cuisines-explore/cuisines-explore.component';
+import { CuisineDetailsComponent } from './client/components/cuisine-details/cuisine-details.component';
+import { RecipeDetailsComponent } from './client/components/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { SigninComponent } from './shared/components/signin/signin.component';
     HomeCuisinesComponent,
     SignupComponent,
     SigninComponent,
+    RecipesExploreComponent,
+    CuisinesExploreComponent,
+    CuisineDetailsComponent,
+    RecipeDetailsComponent,
     
   ],
   imports: [
