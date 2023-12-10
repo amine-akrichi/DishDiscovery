@@ -8,6 +8,7 @@ import { HomeHeroComponent } from './client/components/home-hero/home-hero.compo
 import { HomeComponent } from './client/components/home/home.component';
 import { HomeFeaturedComponent } from './client/components/home-featured/home-featured.component';
 import { HomeCuisinesComponent } from './client/components/home-cuisines/home-cuisines.component';
+import { SignupComponent } from './shared/components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeCuisinesComponent } from './client/components/home-cuisines/home-cu
     HomeHeroComponent,
     HomeFeaturedComponent,
     HomeCuisinesComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
