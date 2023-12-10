@@ -3,7 +3,7 @@
     justify-content: end;
     align-items: center;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af");
+    background: url("https://images.unsplash.com/photo-1556909211-36987daf7b4d");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,35 +15,38 @@
     flex-direction: column;
     width: 50%;
     padding: 5%;
-
+    color: white;
+    background-color: #88AB8E;
 }
+
 
 .hero-content h1{
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #EEE7DA;
 }
 
 .hero-content p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
+    color: #EEE7DA;
 }
 
 .hero-content button{
     width: 200px;
     height: 50px;
-    border-radius: 5px;
     border: none;
-    background-color: #3388cd;
-    color: white;
-    font-size: 1rem;
+    background-color: #EEE7DA;
+    color: #88AB8E;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 25px;
 }
 
 .hero-content button:hover{
-    background-color: #3388cd;
-    opacity: 0.8;
+    background-color: #AFC8AD;
+    color: #EEE7DA;
+    transition: 0.3s ease-in-out ;
    
 }
 

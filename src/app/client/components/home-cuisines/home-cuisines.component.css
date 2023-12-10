@@ -1,0 +1,89 @@
+.wrapper{
+    background-color: #eee;
+    padding: 20px;
+}
+.section-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #AFC8AD;
+}
+.featured-cuisines{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.featured-cuisines .cuisine-card{
+    background-color: white;
+    width: 650px;
+    margin: 20px;
+    height: 200px;
+    display: flex;
+}
+
+.featured-cuisines .cuisine-card:hover{
+    box-shadow: 0px 8px 24px #88ab8e60;
+    transition: 0.3s ease-in-out;
+}
+
+.featured-cuisines .cuisine-card .card-body{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.featured-cuisines .cuisine-card img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.featured-cuisines .cuisine-card .card-body h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #AFC8AD;
+}
+
+.featured-cuisines .cuisine-card .card-body p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.featured-cuisines .cuisine-card .card-body .card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border: 1px solid #AFC8AD;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.featured-cuisines .cuisine-card .card-body .card-footer button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #AFC8AD;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.featured-cuisines .cuisine-card .card-body .card-footer button:hover{
+    background-color: #88AB8E;
+    transition: 0.3s ease-in-out;
+}
