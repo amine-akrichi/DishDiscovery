@@ -1,3 +1,4 @@
+<div *ngIf="shouldShowLayout()">
 <nav>
   <span class="logo">DishDiscovery</span>
   <ul class="nav-list">
@@ -7,12 +8,13 @@
   </ul>
   <div class="nav-right">
     <input type="text" placeholder="Search">
-    <button>Login</button>
-    <button>Sign Up</button>
+    <button routerLink="/signin">Login</button>
+    <button routerLink="/signup">Sign Up</button>
   </div>
 </nav>
+</div>
 <router-outlet></router-outlet>
-
+<div *ngIf="shouldShowLayout()">
 <footer>
   <div class="footer-left">
     <span class="logo">DishDiscovery</span>
@@ -30,3 +32,4 @@
     </ul>
   </div>
 </footer>
+</div>

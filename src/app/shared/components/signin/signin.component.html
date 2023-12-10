@@ -1,0 +1,52 @@
+<section class="vh-100">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 text-black">
+  
+          <div class="px-5 ms-xl-4">
+            <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+            <span class="h1 fw-bold mb-0">Logo</span>
+          </div>
+  
+          <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+  
+            <form [formGroup]= "signinForm">
+  
+              <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+  
+              <div class="form-group">
+                <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder="Email" formControlName="email"/>
+                <div class="text-danger" *ngIf="signinForm.controls['email'].invalid && (signinForm.controls['email'].dirty || signinForm.controls['email'].touched)">
+                  <div *ngIf="signinForm.controls['email'].errors?.['required']">Email is required</div>
+                  <div *ngIf="signinForm.controls['email'].errors?.['email']">Invalid email format</div>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <input type="password" id="form2Example28" class="form-control form-control-lg" formControlName="password" placeholder="password"/>
+                <label class="form-label" for="form2Example28">Password</label>
+                <div class="text-danger" *ngIf="signinForm.controls['password'].invalid && (signinForm.controls['password'].dirty || signinForm.controls['password'].touched)">
+                  <div *ngIf="signinForm.controls['password'].errors?.['required']">Password is required</div>
+                  <div *ngIf="signinForm.controls['password'].errors?.['minlength']">Password should be at least 6 characters</div>
+                </div>
+              </div>
+  
+              <div class="pt-1 mb-4">
+                <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+              </div>
+  
+              <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+              <p>Don't have an account? <a routerLink="/signup" class="link-info">Register here</a></p>
+  
+            </form>
+  
+          </div>
+  
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src=""
+            alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+        </div>
+      </div>
+    </div>
+  </section>
