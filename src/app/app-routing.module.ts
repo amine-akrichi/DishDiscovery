@@ -8,6 +8,7 @@ import { SignupComponent } from './shared/components/signup/signup.component';
 import { SigninComponent } from './shared/components/signin/signin.component';
 import { RecipesExploreComponent } from './client/components/recipes-explore/recipes-explore.component';
 import { CuisinesExploreComponent } from './client/components/cuisines-explore/cuisines-explore.component';
+import { RecipeDetailsComponent } from './client/components/recipe-details/recipe-details.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'recipes', component: RecipesExploreComponent },
+      { path: 'recipes/:recipeId', component: RecipeDetailsComponent },
       { path: 'cuisines', component: CuisinesExploreComponent },
     ],
   },

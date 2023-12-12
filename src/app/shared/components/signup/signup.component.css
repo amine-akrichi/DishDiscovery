@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #afc8ad;
+    background-color: #EEE7DA;
     box-shadow: #88AB8E 0px 8px 24px;
 }
 
@@ -38,7 +38,7 @@
 .wrapper-form h1{
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #EEE7DA;
+    color: #88AB8E;
 }
 
 .wrapper-form form{
@@ -49,22 +49,26 @@
 .wrapper-form form p{
     font-size: 1;
     margin-bottom: 5px;
-    color: #EEE7DA;
     margin-top: 10px;
 }
 
 .form-control{
     width: 100%;
-    border: 1px solid #EEE7DA;
+    border: 0;
     height: 50px;
     padding: 2px;
     margin: 5px 0;
+    border-bottom: #88AB8E 3px solid;
+    background-color: #EEE7DA;
    
 }
 
 .form-control:focus{
     outline: none;
-    border: 1px solid #afc8ad;
+}
+.form-control::placeholder{
+    font-size: 1rem;
+    color: #88AB8E;
 }
 
 .form-error{
@@ -82,9 +86,9 @@
     font-size: 1.5rem;
     margin-top: 20px;
     cursor: pointer;
-    border: 1px solid #EEE7DA;
-    background-color: #EEE7DA;
-    color: #88AB8E;
+    border: 1px solid #88AB8E;
+    background-color: #88AB8E;
+    color: #EEE7DA;
 
 }
 

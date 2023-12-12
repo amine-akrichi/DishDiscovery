@@ -1,0 +1,72 @@
+.dialog-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-title h1{
+    color: #88ab8e;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.dialog-title button {
+    background-color: #88ab8e;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #F2F1EB;
+    padding: 15px;
+    border: none;
+    margin-right: 20px;
+}
+
+
+.dialog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control-hald-width {
+  width: 50%;
+  margin: 10px;
+  height: 50px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: #88ab8e 3px solid;
+  padding: 5px;
+  background-color: #F2F1EB;
+}
+
+.form-control-hald-width::placeholder {
+  color: #88ab8e;
+  font-size: 1rem;
+}
+
+.row textarea {
+  width: 95%;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-bottom: #88ab8e 3px solid;
+  background-color: #F2F1EB;
+  margin-bottom: 10px;
+}
+
+.row textarea::placeholder {
+  color: #88ab8e;
+  font-size: 1rem;
+}

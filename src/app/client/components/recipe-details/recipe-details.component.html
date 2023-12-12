@@ -1,1 +1,12 @@
-<p>recipe-details works!</p>
+<div class="wrapper">
+    <img class="wrapper-img" src="{{recipe.image}}" alt="">
+    <div class="recipe-details">
+        <h1>{{recipe.title}}</h1>
+        <p class="recipe-desc">{{recipe.description}}</p>
+        <div class="recipe-info">
+            <p>Serving: {{recipe.servings}}</p>
+            <p>Total Coking time: {{recipe.totalTime}}</p>
+        </div>
+        <p class="recipe-instructions">{{recipe.recipe}}</p>
+    </div>
+</div>

@@ -1,85 +1,17 @@
 <div class="wrapper">
   <h2 class="section-title">Our best reviewed recipes</h2>
   <div class="featured-recipes">
+    @for (recipe of recipes; track $index) {
     <div class="recipe-card">
-      <img
-        src="https://images.unsplash.com/photo-1568625435602-552bac80484e"
-        alt="Recipe Image"
-      />
+      <img alt="Recipe Image" src="{{ recipe.image }}" />
       <div class="card-body">
-        <h5 class="recipe-title">Recipe Title</h5>
-        <p class="recipe-description">Recipe Description</p>
+        <h5 class="recipe-title">{{ recipe.title }}</h5>
+        <p class="recipe-description">{{ recipe.description }}</p>
         <div class="card-footer">
           <button class="btn">View Recipe</button>
         </div>
       </div>
     </div>
-
-    <div class="recipe-card">
-      <img
-        src="https://images.unsplash.com/photo-1568625435602-552bac80484e"
-        alt="Recipe Image"
-      />
-      <div class="card-body">
-        <h5 class="recipe-title">Recipe Title</h5>
-        <p class="recipe-description">Recipe Description</p>
-        <div class="card-footer">
-          <button class="btn">View Recipe</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="recipe-card">
-      <img
-        src="https://images.unsplash.com/photo-1568625435602-552bac80484e"
-        alt="Recipe Image"
-      />
-      <div class="card-body">
-        <h5 class="recipe-title">Recipe Title</h5>
-        <p class="recipe-description">Recipe Description</p>
-        <div class="card-footer">
-          <button class="btn">View Recipe</button>
-        </div>
-      </div>
-    </div>
-    <div class="recipe-card">
-      <img
-        src="https://images.unsplash.com/photo-1568625435602-552bac80484e"
-        alt="Recipe Image"
-      />
-      <div class="card-body">
-        <h5 class="recipe-title">Recipe Title</h5>
-        <p class="recipe-description">Recipe Description</p>
-        <div class="card-footer">
-          <button class="btn">View Recipe</button>
-        </div>
-      </div>
-    </div>
-    <div class="recipe-card">
-      <img
-        src="https://images.unsplash.com/photo-1568625435602-552bac80484e"
-        alt="Recipe Image"
-      />
-      <div class="card-body">
-        <h5 class="recipe-title">Recipe Title</h5>
-        <p class="recipe-description">Recipe Description</p>
-        <div class="card-footer">
-          <button class="btn">View Recipe</button>
-        </div>
-      </div>
-    </div>
-    <div class="recipe-card">
-        <img
-          src="https://images.unsplash.com/photo-1568625435602-552bac80484e"
-          alt="Recipe Image"
-        />
-        <div class="card-body">
-          <h5 class="recipe-title">Recipe Title</h5>
-          <p class="recipe-description">Recipe Description</p>
-          <div class="card-footer">
-            <button class="btn">View Recipe</button>
-          </div>
-        </div>
-      </div>
+    }
   </div>
 </div>

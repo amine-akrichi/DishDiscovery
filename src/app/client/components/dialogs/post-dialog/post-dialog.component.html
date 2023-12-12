@@ -1,0 +1,23 @@
+<div class="dialog-title">
+    <H1>Post new recipe</H1>
+    <button  [mat-dialog-close]="data" >Confirm</button>
+</div>
+<div class="dialog-content">
+    <div class="row">
+        <input type="file" (change)="onFileChanged($event)" name="file" id="">
+    </div>
+    <div class="row">
+        <input [(ngModel)]="data.title" type="text" class="form-control-hald-width" placeholder="Title">
+        <input [(ngModel)]="data.type" type="text" class="form-control-hald-width" placeholder="Type">
+    </div>
+    <div class="row">
+        <textarea [(ngModel)]="data.description" placeholder="Description" name="" id="" cols="30" rows="3"></textarea>
+    </div>
+    <div class="row">
+        <textarea [(ngModel)]="data.recipe" placeholder="Recipe" name="" id="" cols="30" rows="15"></textarea>
+    </div>
+    <div class="row">
+        <input [(ngModel)]="data.servings" type="number" class="form-control-hald-width" placeholder="Servings" name="" id="">
+        <input [(ngModel)]="data.totalTime" type="number" class="form-control-hald-width" placeholder="Total Cooking Time (In Minutes)" name="" id="">
+    </div>
+</div>  

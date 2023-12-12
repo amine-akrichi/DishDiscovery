@@ -36,6 +36,17 @@
 }
 
 
+.header button{
+  width: 150px;
+  height: 60px;
+  border: none;
+  background-color: #afc8ad;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
 .featured-recipes {
   margin-top: 20px;
   margin-bottom: 20px;

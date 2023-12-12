@@ -1,13 +1,13 @@
 <div class="container">
   <div class="wrapper">
-    <img src="https://images.unsplash.com/photo-1568625435602-552bac80484e" alt="" class="wrapper-img">
+    <img src="assets/register.jpg" alt="" class="wrapper-img">
     <div class="wrapper-form">
       <h1>Signup</h1>
       <form [formGroup]="signupForm">
         <div class="form-group">
           <input
             class="form-control"
-            id="firstname-input"
+            id="firstname"
             type="input"
             placeholder="First name"
             formControlName="firstname"
@@ -20,7 +20,7 @@
                 signupForm.controls['firstname'].touched)
             "
           >
-            <div *ngIf="signupForm.controls['firstname'].errors?.['required']">
+            <div id="error-message" *ngIf="signupForm.controls['firstname'].errors?.['required']">
               firstname is required
             </div>
           </div>
@@ -29,7 +29,7 @@
         <div class="form-group">
           <input
             class="form-control"
-            id="lastname-input"
+            id="lastname"
             type="input"
             placeholder="Lastname"
             formControlName="lastname"
@@ -42,7 +42,7 @@
                 signupForm.controls['lastname'].touched)
             "
           >
-            <div *ngIf="signupForm.controls['lastname'].errors?.['required']">
+            <div id="error-message" *ngIf="signupForm.controls['lastname'].errors?.['required']">
               lastname is required
             </div>
           </div>
@@ -51,7 +51,7 @@
         <div class="form-group">
           <input
             class="form-control"
-            id="email-input"
+            id="email"
             type="input"
             placeholder="Email"
             formControlName="email"
@@ -64,10 +64,10 @@
                 signupForm.controls['email'].touched)
             "
           >
-            <div *ngIf="signupForm.controls['email'].errors?.['required']">
+            <div id="error-message" *ngIf="signupForm.controls['email'].errors?.['required']">
               email is required
             </div>
-            <div *ngIf="signupForm.controls['email'].errors?.['email']">
+            <div id="error-message" *ngIf="signupForm.controls['email'].errors?.['email']">
               Invalid email format
             </div>
           </div>
@@ -76,7 +76,7 @@
         <div class="form-group">
           <input
             class="form-control"
-            id="username-input"
+            id="username"
             type="input"
             placeholder="username"
             formControlName="username"
@@ -89,7 +89,7 @@
                 signupForm.controls['username'].touched)
             "
           >
-            <div *ngIf="signupForm.controls['username'].errors?.['required']">
+            <div id="error-message" *ngIf="signupForm.controls['username'].errors?.['required']">
               username is required
             </div>
           </div>
@@ -98,7 +98,7 @@
         <div class="form-group">
           <input
             type="password"
-            id="password-input"
+            id="password"
             class="form-control"
             formControlName="password"
             placeholder="password"
@@ -111,16 +111,16 @@
                 signupForm.controls['password'].touched)
             "
           >
-            <div *ngIf="signupForm.controls['password'].errors?.['required']">
+            <div id="error-message" *ngIf="signupForm.controls['password'].errors?.['required']">
               Password is required
             </div>
-            <div *ngIf="signupForm.controls['password'].errors?.['minlength']">
+            <div id="error-message" *ngIf="signupForm.controls['password'].errors?.['minlength']">
               Password should be at least 6 characters
             </div>
           </div>
         </div>
 
-        <button class="btn" type="button">
+        <button (click)='signup()' id="signup-button" class="btn" type="button">
           Signup
         </button>
 

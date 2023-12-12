@@ -16,6 +16,10 @@ import { RecipesExploreComponent } from './client/components/recipes-explore/rec
 import { CuisinesExploreComponent } from './client/components/cuisines-explore/cuisines-explore.component';
 import { CuisineDetailsComponent } from './client/components/cuisine-details/cuisine-details.component';
 import { RecipeDetailsComponent } from './client/components/recipe-details/recipe-details.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from "@angular/material/dialog";
+import { PostDialogComponent } from './client/components/dialogs/post-dialog/post-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,9 @@ import { RecipeDetailsComponent } from './client/components/recipe-details/recip
     CuisinesExploreComponent,
     CuisineDetailsComponent,
     RecipeDetailsComponent,
+    PostDialogComponent,
+
+
     
   ],
   imports: [
@@ -38,9 +45,12 @@ import { RecipeDetailsComponent } from './client/components/recipe-details/recip
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
    
+    MatDialogModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
