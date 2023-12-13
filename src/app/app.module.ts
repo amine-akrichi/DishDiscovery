@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from "@angular/material/dialog";
 import { PostDialogComponent } from './client/components/dialogs/post-dialog/post-dialog.component';
 import { UserProfileComponent } from './client/components/user-profile/user-profile.component';
+import { UserSettingsComponent } from './client/components/user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { UserProfileComponent } from './client/components/user-profile/user-prof
     RecipeDetailsComponent,
     PostDialogComponent,
     UserProfileComponent,
+    UserSettingsComponent,
 
 
     

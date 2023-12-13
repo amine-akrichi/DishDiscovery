@@ -16,10 +16,10 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'recipes', component: RecipesExploreComponent },
-      { path: 'recipes/:recipeId', component: RecipeDetailsComponent },
-      { path: 'cuisines', component: CuisinesExploreComponent },
+      { path: 'home', component: HomeComponent, title:'DishDiscovery | Home' },
+      { path: 'recipes', component: RecipesExploreComponent ,title:'DishDiscovery | Explore Recipes'},
+      { path: 'recipes/:recipeId', component: RecipeDetailsComponent , title:'DishDiscovery | '+':recipeId'+'Recipe Details'},
+      { path: 'cuisines', component: CuisinesExploreComponent, title:'DishDiscovery | Featured Cuisines' },
     ],
   },
   {
