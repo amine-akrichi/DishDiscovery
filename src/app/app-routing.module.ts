@@ -9,6 +9,7 @@ import { SigninComponent } from './shared/components/signin/signin.component';
 import { RecipesExploreComponent } from './client/components/recipes-explore/recipes-explore.component';
 import { CuisinesExploreComponent } from './client/components/cuisines-explore/cuisines-explore.component';
 import { RecipeDetailsComponent } from './client/components/recipe-details/recipe-details.component';
+import { UserProfileComponent } from './client/components/user-profile/user-profile.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SigninComponent,
+  },
+  {
+    path: 'userprofile',
+    component: UserProfileComponent,
   },
 ];
 

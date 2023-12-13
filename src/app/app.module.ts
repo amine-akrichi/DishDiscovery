@@ -20,6 +20,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from "@angular/material/dialog";
 import { PostDialogComponent } from './client/components/dialogs/post-dialog/post-dialog.component';
+import { UserProfileComponent } from './client/components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PostDialogComponent } from './client/components/dialogs/post-dialog/pos
     CuisineDetailsComponent,
     RecipeDetailsComponent,
     PostDialogComponent,
+    UserProfileComponent,
 
 
     

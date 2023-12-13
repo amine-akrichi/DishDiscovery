@@ -8,10 +8,18 @@ import { Router } from '@angular/router';
 })
 export class LayoutComponent {
   constructor(private router: Router) {}
-
+  isProfileMenuOpen = false;
   shouldShowLayout(): boolean {
     // Check if the current route is neither signup nor signin
     const currentRoute = this.router.url;
-    return !currentRoute.includes('/signup') && !currentRoute.includes('/signin');
+    return !currentRoute.includes('/signup') && !currentRoute.includes('/signin') && !currentRoute.includes('/userprofile');
+  }
+  toggleProfileMenu() {
+    this.isProfileMenuOpen = !this.isProfileMenuOpen;
+  }
+  logout() {
+    // Implement the logic to handle the "Logout" action
+    alert('are you sure ?');
+    // You can navigate to the logout route or perform other logout actions
   }
 }

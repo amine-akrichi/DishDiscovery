@@ -1,15 +1,31 @@
 <div *ngIf="shouldShowLayout()">
-  <nav>
-    <span class="logo">DishDiscovery</span>
-    <ul class="nav-list">
-      <li routerLink="/home">Home</li>
-      <li routerLink="/recipes">Recipes</li>
-      <li routerLink="/cuisines">Cuisines</li>
-    </ul>
-    <div class="nav-right">
-      <img routerLink="/signin" src="assets/account.svg" alt="">
+ <!-- app.component.html or your navigation component template -->
+
+<nav>
+  <span class="logo">DishDiscovery</span>
+  <ul class="nav-list">
+    <li routerLink="/home">Home</li>
+    <li routerLink="/recipes">Recipes</li>
+    <li routerLink="/cuisines">Cuisines</li>
+  </ul>
+
+
+<!-- app.component.html or your navigation component template -->
+
+<div class="nav-right">
+  <div class="profile-dropdown">
+    <img src="assets/account.svg" alt="Profile" width="40" height="40" (click)="toggleProfileMenu()">
+    <div *ngIf="isProfileMenuOpen" class="dropdown-menu">
+      <a class="dropdown-item" routerLink="/userprofile">Edit Profile</a>
+      <a class="dropdown-item" routerLink="/signin" (click)="logout()">Logout</a>
     </div>
-  </nav>
+  </div>
+</div>
+
+
+
+</nav>
+
 </div>
 <router-outlet></router-outlet>
 

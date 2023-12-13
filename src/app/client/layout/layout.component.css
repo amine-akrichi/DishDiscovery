@@ -243,5 +243,81 @@ nav {
 	.footer-distributed .footer-center i{
 		margin-left: 0;
 	}
+	
 
 }
+/* Add this to your component's CSS file or your global styles */
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.profile-dropdown .dropdown-item {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-dropdown .dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+/* Add this to your component's CSS file or your global styles */
+
+.profile-dropdown {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+  }
+  
+  .profile-dropdown .dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 160px;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	z-index: 100;
+  }
+  
+  .profile-dropdown:hover .dropdown-menu {
+	display: block;
+  }
+  
+  .profile-dropdown .dropdown-item {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: #333;
+  }
+  
+  .profile-dropdown .dropdown-item:hover {
+	background-color: #88AB8E;
+  }
+  
+  /* Adjust the right margin for .nav-right */
+  .nav-right {
+	margin-right: 150px; /* Update to your preferred value */
+  }
+  
+  
+  
