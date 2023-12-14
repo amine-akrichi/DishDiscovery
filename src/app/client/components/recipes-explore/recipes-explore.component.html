@@ -2,26 +2,46 @@
   <div class="header">
     <h2 >Explore our recipes</h2>
     <div>
-      <input type="text" placeholder="Search" />
+      <input type="text"  [(ngModel)]="searchTextChanged" placeholder="Search" />
       <button id="post-button" (click)="openPostDialog()">Post</button>
     </div>
     
   </div>
-
-  @for (recipe of recipes; track $index) {
-    <div class="recipe-card">
-      <img
-        src="{{recipe.image}}"
-        alt="Recipe Image"
-      />
-      <div class="card-body">
-        <h5 class="recipe-title">{{recipe.title}}</h5>
-        <p class="recipe-description">{{recipe.description}}</p>
-        <div class="card-footer">
-          <button [routerLink]="['/recipes',recipe.id]" class="btn">View Recipe</button>
+  <div class="featured-recipes">
+    @for (recipe of recipes; track $index;) {
+      @if (searchTextChanged!= null && recipe.title.toLowerCase().includes(searchTextChanged.toLowerCase())) {
+        <div class="recipe-card">
+          <img
+            src="{{recipe.image}}"
+            alt="Recipe Image"
+          />
+          <div class="card-body">
+            <h5 class="recipe-title">{{recipe.title}}</h5>
+            <p class="recipe-description">{{recipe.description}}</p>
+            <div class="card-footer">
+              <button [routerLink]="['/recipes',recipe.id]" class="btn">View Recipe</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  }
+      }
+      @if (searchTextChanged== null) {
+        <div class="recipe-card">
+          <img
+            src="{{recipe.image}}"
+            alt="Recipe Image"
+          />
+          <div class="card-body">
+            <h5 class="recipe-title">{{recipe.title}}</h5>
+            <p class="recipe-description">{{recipe.description}}</p>
+            <div class="card-footer">
+              <button [routerLink]="['/recipes',recipe.id]" class="btn">View Recipe</button>
+            </div>
+          </div>
+        </div>
+      }
+      
+    }
+  </div>
+ 
 
 </div>

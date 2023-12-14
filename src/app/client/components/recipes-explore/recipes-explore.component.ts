@@ -12,6 +12,7 @@ import { RecipeService } from '../../../services/recipe.service';
 export class RecipesExploreComponent {
   constructor(public dialog: MatDialog, public _router:Router, private _recipeService: RecipeService) {}
   recipes: any;
+  searchTextChanged: any;
   ngOnInit(): void {
     this._recipeService.getRecipes().subscribe(
       (res) => {

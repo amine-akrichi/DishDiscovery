@@ -2,25 +2,19 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-post-dialog',
-  templateUrl: './post-dialog.component.html',
-  styleUrl: './post-dialog.component.css',
+  selector: 'app-edit-profile-dialog',
+  templateUrl: './edit-profile-dialog.component.html',
+  styleUrl: './edit-profile-dialog.component.css'
 })
-export class PostDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-    data.username = sessionStorage.getItem('username')
-    data.id = 10000;
-  
-  }
-
-
+export class EditProfileDialogComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
   onFileChanged(event: any): void {
     const file = event.target.files?.[0];
 
     if (file) {
       this.convertImageToBlobString(file)
         .then((base64String) => {
-          this.data.image = base64String;
+          this.data.user.profilePicture = base64String;
         })
         .catch((error) => {
           console.error('Error converting image to base64:', error);

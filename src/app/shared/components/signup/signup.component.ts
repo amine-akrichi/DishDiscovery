@@ -19,6 +19,7 @@ constructor(private formBuilder: FormBuilder, private _authService:AuthService, 
       email: ["", [Validators.required, Validators.email]],
       username: ["", [Validators.required]],
       password: ["", [Validators.required, Validators.minLength(6)]], 
+      profilePicture: ["", []]
     },
     );
   }
@@ -36,4 +37,38 @@ constructor(private formBuilder: FormBuilder, private _authService:AuthService, 
       err => console.log(err)
     )
   }
+ 
+
+  onFileChanged(event: any): void {
+    const file = event.target.files?.[0];
+
+    if (file) {
+      this.convertImageToBlobString(file)
+        .then((base64String) => {
+          this.signupForm.get('profilePicture')?.setValue(base64String);
+        })
+        .catch((error) => {
+          console.error('Error converting image to base64:', error);
+        });
+    }
+  }
+
+  convertImageToBlobString(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        // 'result' property contains the data URL as a base64-encoded string
+        const base64String = reader.result as string;
+        resolve(base64String);
+      };
+
+      reader.onerror = (error) => {
+        reject(error);
+      };
+
+      reader.readAsDataURL(file);
+    });
+  }
+  
 }

@@ -18,9 +18,9 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent, title:'DishDiscovery | Home' },
       { path: 'recipes', component: RecipesExploreComponent ,title:'DishDiscovery | Explore Recipes'},
-      { path: 'recipes/:recipeId', component: RecipeDetailsComponent , title:'DishDiscovery | '+':recipeId'+'Recipe Details'},
+      { path: 'recipes/:recipeId', component: RecipeDetailsComponent , title:'DishDiscovery | Recipe Details'},
       { path: 'cuisines', component: CuisinesExploreComponent, title:'DishDiscovery | Featured Cuisines' },
-      { path: 'userprofile', component: UserProfileComponent, title:'DishDiscovery | User Profile' },
+      { path: 'users/:username', component: UserProfileComponent, title:'DishDiscovery | Profile' },
     ],
   },
   {

@@ -1,6 +1,6 @@
 .wrapper{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin-top:10vh ;
     display: flex;
 }
@@ -46,4 +46,5 @@
 .recipe-instructions{
     font-size: 1.2rem;
     margin-bottom: 20px;
+    white-space: pre-line;
 }

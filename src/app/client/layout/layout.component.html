@@ -4,12 +4,12 @@
     <ul class="nav-list">
       <li routerLink="/home">Home</li>
       <li routerLink="/recipes">Recipes</li>
-      <li routerLink="/cuisines">Cuisines</li>
+      <!--<li routerLink="/cuisines">Cuisines</li>-->
     </ul>
 
     <div class="nav-right">
       <div class="profile-dropdown">
-        <img routerLink="/userprofile" src="assets/account.svg" alt="Profile" />
+        <img *ngIf="loggedInUsername" (click)="redirect()" src="{{user.profilePicture}}" alt="Profile" />
       </div>
     </div>
   </nav>

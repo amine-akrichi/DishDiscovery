@@ -22,6 +22,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { PostDialogComponent } from './client/components/dialogs/post-dialog/post-dialog.component';
 import { UserProfileComponent } from './client/components/user-profile/user-profile.component';
 import { UserSettingsComponent } from './client/components/user-settings/user-settings.component';
+import { EditProfileDialogComponent } from './client/components/dialogs/edit-profile-dialog/edit-profile-dialog.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UserSettingsComponent } from './client/components/user-settings/user-se
     PostDialogComponent,
     UserProfileComponent,
     UserSettingsComponent,
+    EditProfileDialogComponent,
 
 
     

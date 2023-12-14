@@ -8,6 +8,7 @@ export class RecipeService {
   private _getRecipeUrl = "http://localhost:8080/api/v1/recipe";
   private _postRecipeUrl = "http://localhost:8080/api/v1/recipe";
   private _getRecipeByIdUrl = "http://localhost:8080/api/v1/recipe/{recipeId}";
+  private _getRecipeByUsernameUrl = "http://localhost:8080/api/v1/recipe/user/{username}";
 
   constructor(private _http: HttpClient) { }
 
@@ -21,5 +22,9 @@ export class RecipeService {
 
   getRecipeById(recipeId: number){
     return this._http.get<any>(this._getRecipeByIdUrl.replace('{recipeId}', recipeId.toString()));
+  }
+
+  getRecipeByUsername(username: string){
+    return this._http.get<any>(this._getRecipeByUsernameUrl.replace('{username}', username));
   }
 }

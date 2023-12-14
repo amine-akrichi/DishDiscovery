@@ -1,0 +1,23 @@
+<div class="dialog-title">
+    <H1>Post new recipe</H1>
+    <button  [mat-dialog-close]="data" >Confirm</button>
+</div>
+<div class="dialog-content">
+    <div class="row">
+        <input type="file" (change)="onFileChanged($event)" name="file" id="">
+    </div>
+    <div class="row">
+        <input [(ngModel)]="data.user.username" type="text" class="form-control-hald-width" placeholder="Username">
+        <input [(ngModel)]="data.user.email" type="text" class="form-control-hald-width" placeholder="Email">
+    </div>
+    <div class="row">
+        <input [(ngModel)]="data.user.firstname" type="text" class="form-control-hald-width" placeholder="Firstname" name="" id="">
+        <input [(ngModel)]="data.user.lastname" type="text" class="form-control-hald-width" placeholder="Lastname" name="" id="">
+    </div>
+    
+    <div class="row">
+        <textarea [(ngModel)]="data.user.description" placeholder="Description" name="" id="" cols="30" rows="15"></textarea>
+    </div>
+    
+    
+</div>
