@@ -1,79 +1,60 @@
-<div *ngIf="shouldShowLayout()">
- <!-- app.component.html or your navigation component template -->
+<div class="wrapper">
+  <nav>
+    <span class="logo">Dish<span>Discovery</span></span>
+    <ul class="nav-list">
+      <li routerLink="/home">Home</li>
+      <li routerLink="/recipes">Recipes</li>
+      <li routerLink="/cuisines">Cuisines</li>
+    </ul>
 
-<nav>
-  <span class="logo">DishDiscovery</span>
-  <ul class="nav-list">
-    <li routerLink="/home">Home</li>
-    <li routerLink="/recipes">Recipes</li>
-    <li routerLink="/cuisines">Cuisines</li>
-  </ul>
-
-
-<!-- app.component.html or your navigation component template -->
-
-<div class="nav-right">
-  <div class="profile-dropdown">
-    <img src="assets/account.svg" alt="Profile" width="40" height="40" (click)="toggleProfileMenu()">
-    <div *ngIf="isProfileMenuOpen" class="dropdown-menu">
-      <a class="dropdown-item" routerLink="/userprofile">Edit Profile</a>
-      <a class="dropdown-item" routerLink="/signin" (click)="logout()">Logout</a>
+    <div class="nav-right">
+      <div class="profile-dropdown">
+        <img routerLink="/userprofile" src="assets/account.svg" alt="Profile" />
+      </div>
     </div>
-  </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+  <footer class="footer-distributed" *ngIf="shouldShowLayout()">
+    <div class="footer-left">
+      <h3>Dish<span>Discovery</span></h3>
+
+      <p class="footer-links">
+        <a routerLink="/home" class="link-1">Home</a>
+
+        <a routerLink="/recipes">recipes</a>
+
+        <a routerLink="/cuisines">cuisines</a>
+
+        <a routerLink="/signin">login</a>
+
+        <a routerLink="/signup">signup</a>
+      </p>
+
+      <p class="footer-company-name">DishDiscovery © 2023</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1.555.555.5555</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="">supportourcompany.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About Us</span>
+        Whether you're a seasoned chef or a kitchen newbie, our platform is
+        designed for you. Discover mouthwatering recipes, connect with fellow
+        food enthusiasts, and embark on a culinary journey that's as diverse as
+        it is delightful.
+      </p>
+    </div>
+  </footer>
 </div>
-
-
-
-</nav>
-
-</div>
-<router-outlet></router-outlet>
-
-<footer class="footer-distributed">
-  
-  <div class="footer-left">
-
-    <h3>Dish<span>Discovery</span></h3>
-
-    <p class="footer-links">
-      <a routerLink="/home" class="link-1">Home</a>
-      
-      <a routerLink="/recipes">recipes</a>
-    
-      <a routerLink="/cuisines">cuisines</a>
-    
-      
-      <a routerLink="/signin">login</a>
-      
-      <a routerLink="/signup">signup</a>
-    </p>
-
-    <p class="footer-company-name">DishDiscovery © 2023</p>
-  </div>
-
-  <div class="footer-center">
-
-    <div>
-      <i class="fa fa-phone"></i>
-      <p>+1.555.555.5555</p>
-    </div>
-
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p><a href="">supportourcompany.com</a></p>
-    </div>
-
-  </div>
-
-  <div class="footer-right">
-
-    <p class="footer-company-about">
-      <span>About Us</span>
-      Whether you're a seasoned chef or a kitchen newbie, our platform is designed for you. Discover mouthwatering recipes, connect with fellow food enthusiasts, and embark on a culinary journey that's as diverse as it is delightful.
-    </p>
-
-    
-
-  </div>
-
-</footer>

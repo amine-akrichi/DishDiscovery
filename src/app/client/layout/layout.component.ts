@@ -14,12 +14,5 @@ export class LayoutComponent {
     const currentRoute = this.router.url;
     return !currentRoute.includes('/signup') && !currentRoute.includes('/signin') && !currentRoute.includes('/userprofile');
   }
-  toggleProfileMenu() {
-    this.isProfileMenuOpen = !this.isProfileMenuOpen;
-  }
-  logout() {
-    // Implement the logic to handle the "Logout" action
-    alert('are you sure ?');
-    // You can navigate to the logout route or perform other logout actions
-  }
+
 }

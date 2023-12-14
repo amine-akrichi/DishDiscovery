@@ -1,3 +1,7 @@
+.wrapper {
+  min-height: 100vh;
+}
+
 nav {
   height: 10vh;
   display: flex;
@@ -18,6 +22,10 @@ nav {
   font-size: 1.6rem;
 }
 
+.logo span {
+  color: #88AB8E;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -33,7 +41,7 @@ nav {
 
 .nav-list li:hover {
   border-color: #88AB8E;
-  transform:  border-color 1s ease;
+  transition: 0.3s ease-in;
   cursor: pointer;
 }
 
@@ -62,8 +70,6 @@ nav {
 }
 
 
-
-
 .footer-distributed{
 	background: #EEE7DA;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -72,6 +78,7 @@ nav {
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
+
 }
 
 .footer-distributed .footer-left,

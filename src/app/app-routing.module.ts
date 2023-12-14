@@ -20,6 +20,7 @@ const routes: Routes = [
       { path: 'recipes', component: RecipesExploreComponent ,title:'DishDiscovery | Explore Recipes'},
       { path: 'recipes/:recipeId', component: RecipeDetailsComponent , title:'DishDiscovery | '+':recipeId'+'Recipe Details'},
       { path: 'cuisines', component: CuisinesExploreComponent, title:'DishDiscovery | Featured Cuisines' },
+      { path: 'userprofile', component: UserProfileComponent, title:'DishDiscovery | User Profile' },
     ],
   },
   {
@@ -29,10 +30,6 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SigninComponent,
-  },
-  {
-    path: 'userprofile',
-    component: UserProfileComponent,
   },
 ];
 
